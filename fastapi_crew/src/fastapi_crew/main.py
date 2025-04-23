@@ -21,4 +21,4 @@ def run(site):
     inputs = {
         'site': site
     }
-    FastapiCrew().crew().kickoff(inputs=inputs)
+    return FastapiCrew().crew().kickoff(inputs=inputs)
