@@ -183,6 +183,27 @@ FastAPI provides automatic interactive API documentation:
    taskkill /PID <PID> /F
    ```
 
+3. **Common Build Errors**
+   - **CMake Missing Error**
+     ```bash
+     error: command 'cmake' failed: No such file or directory
+     ```
+     Solution:
+     - For Mac: `brew install cmake`
+     - For Ubuntu/Debian: `sudo apt-get install cmake`
+     - For Windows: Download and install from [CMake's official website](https://cmake.org/download/)
+
+   - **Wheel Build Failures**
+     ```bash
+     ERROR: Failed building wheel for [package-name]
+     ```
+     Solution:
+     - Install build essentials:
+       - For Mac: `xcode-select --install`
+       - For Ubuntu/Debian: `sudo apt-get install build-essential`
+       - For Windows: Install Visual Studio Build Tools
+     - Try installing with: `pip install --no-binary :all: [package-name]`
+
 ## Development Guidelines
 
 ### Adding New Dependencies
