@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Install the local package in development mode
-# RUN pip install -e ./fastapi_crew
+# RUN pip install -e ./fastapi_crew  
 
 # Use the main.py in the project root as the entry point
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
