@@ -2,7 +2,13 @@ research_task:
   description: >
     Conduct a thorough research about {site}
   expected_output: >
-    All of the scraped content with the urls that were scraped.
+    Map out all urls from the mapper tool, then batch scrape all the urls!
+    Keep batch scraping until all of them are scraped.  Then take the id from the batch scrape and give it to the 
+    next tool for getting the actual data from the batch scrape.
+
+    Perform the tools in this order:
+    - custom_tool to map out the {site}
+    - scrape 5 urls from the respone
   agent: researcher
 
 reporting_task:
@@ -10,6 +16,6 @@ reporting_task:
     Review the context you got and expand each topic into a full section for a report.
     Make sure the report is detailed and contains any and all relevant information.
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
+    A full report with all the details and breakdowns based on all the urls that were scraped.  
     Formatted as markdown without '```'
   agent: reporting_analyst

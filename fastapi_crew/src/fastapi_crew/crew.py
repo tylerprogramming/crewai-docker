@@ -1,13 +1,13 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from .tools.custom_tool import MyCustomTool
-from crewai_tools import FirecrawlScrapeWebsiteTool
+from .tools.firecrawl_scrape import FireScrapeTool
 from dotenv import load_dotenv
 
 load_dotenv()
 
 firecrawl_map_tool = MyCustomTool()
-firecrawl_tool = FirecrawlScrapeWebsiteTool()
+firecrawl_tool = FireScrapeTool()
 
 @CrewBase
 class FastapiCrew():
