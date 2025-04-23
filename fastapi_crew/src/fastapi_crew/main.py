@@ -3,6 +3,9 @@ import sys
 import warnings
 
 from .crew import FastapiCrew
+from dotenv import load_dotenv
+
+load_dotenv()
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 

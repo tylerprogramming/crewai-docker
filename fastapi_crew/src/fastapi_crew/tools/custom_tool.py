@@ -22,7 +22,7 @@ class MyCustomTool(BaseTool):
     args_schema: Type[BaseModel] = MyCustomToolInput
 
     def _run(self, site: str) -> str:
-        map_result = app.map_url(site, params={
+        map_result = app.map_url(url=site, params={
             'includeSubdomains': True
         })
 
