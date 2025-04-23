@@ -1,4 +1,5 @@
 fastapi
 uvicorn
 crewai
-'crewai[tools]'
+crewai[tools]
+firecrawl-py
