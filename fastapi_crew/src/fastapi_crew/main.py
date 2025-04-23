@@ -11,11 +11,11 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-def run(site: str):
+def run(site):
     """
     Run the crew.
     """
     inputs = {
-        'topic': site
+        'site': site
     }
     FastapiCrew().crew().kickoff(inputs=inputs)
