@@ -1,6 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from tools.custom_tool import MyCustomTool
+from .tools.custom_tool import MyCustomTool
 from crewai_tools import SerperDevTool, FirecrawlScrapeWebsiteTool
 from dotenv import load_dotenv
 

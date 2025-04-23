@@ -2,7 +2,7 @@
 import sys
 import warnings
 
-from fastapi_crew.crew import FastapiCrew
+from .crew import FastapiCrew
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
