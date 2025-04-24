@@ -9,7 +9,7 @@ def read_root():
 
 @app.get("/test")
 def test():
-    return {"message": "This is a simple test!  YES!  please? or??....."}
+    return {"message": "This is a simple test!  YES!  please? or??.....PLEASE!"}
 
 @app.post("/map")
 def map_site():
