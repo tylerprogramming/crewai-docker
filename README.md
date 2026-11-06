@@ -129,6 +129,22 @@ Before you begin, ensure you have the following installed:
   curl http://localhost:5000/
   ```
 
+### Crew Endpoint (`/map`)
+- **URL**: `http://localhost:5000/map`
+- **Method**: POST
+- **Description**: Runs the `fastapi_crew` CrewAI crew against `https://docs.crewai.com` (map the site with Firecrawl, scrape pages, write `report.md`)
+- **Needs**: a `.env` file in the project root with:
+  ```bash
+  OPENAI_API_KEY=your-openai-key
+  FIRECRAWL_API_KEY=your-firecrawl-key
+  ```
+  With Docker, pass it at run time: `docker run -d -p 5000:5000 --env-file .env --name fastapi-container fastapi-app`
+- **Model**: both agents use `gpt-5.4-mini` (set in `fastapi_crew/src/fastapi_crew/config/agents.yaml`). Updated for CrewAI 1.15; the code may differ from the video.
+- **Test with curl**:
+  ```bash
+  curl -X POST http://localhost:5000/map
+  ```
+
 ### Interactive API Documentation
 FastAPI provides automatic interactive API documentation:
 - Swagger UI: Visit `http://localhost:5000/docs`
@@ -252,6 +268,7 @@ docker logs -f fastapi-container
 
 ## Version Information
 - Python: 3.11
-- FastAPI: Latest stable
-- Uvicorn: Latest stable
+- FastAPI: >=0.115,<1
+- Uvicorn: >=0.30,<1
+- CrewAI: >=1.15,<2 (with tools)
 - Docker: Compatible with Docker Engine 20.10+
