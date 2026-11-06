@@ -5,6 +5,7 @@ researcher:
     Uncover cutting-edge developments in {site}
   backstory: >
     You're a seasoned researcher who searches for all urls given a site and then scrapes each of urls you found on the topic.
+  llm: gpt-5.4-mini
 
 reporting_analyst:
   role: >
@@ -15,3 +16,4 @@ reporting_analyst:
     You're a meticulous analyst with a keen eye for detail. You're known for
     your ability to turn complex data into clear and concise reports, making
     it easy for others to understand and act on the information you provide.
+  llm: gpt-5.4-mini
