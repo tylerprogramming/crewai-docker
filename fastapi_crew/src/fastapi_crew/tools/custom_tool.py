@@ -15,9 +15,10 @@ class MyCustomToolInput(BaseModel):
     site: str = Field(..., description="The site we want to map out.")
 
 class MyCustomTool(BaseTool):
-    name: str = "Name of my tool"
+    name: str = "Firecrawl site mapper"
     description: str = (
-        "Clear description for what this tool is useful for, you agent will need this information to use it."
+        "Maps a website with Firecrawl and returns the URLs it finds, one per line. "
+        "Use it first to discover which pages of a site to scrape."
     )
     args_schema: Type[BaseModel] = MyCustomToolInput
 
