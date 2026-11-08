@@ -23,6 +23,8 @@ class MyCustomTool(BaseTool):
     args_schema: Type[BaseModel] = MyCustomToolInput
 
     def _run(self, site: str) -> str:
-        map_result = app.map_url(url=site)
+        # map() is the firecrawl-py v2 call; map_url() is a deprecated v1 alias.
+        # It returns MapData whose links are LinkResult objects, so hand the agent plain URLs.
+        map_result = app.map(url=site)
 
-        return map_result
+        return "\n".join(link.url for link in map_result.links)
