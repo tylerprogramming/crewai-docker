@@ -271,4 +271,5 @@ docker logs -f fastapi-container
 - FastAPI: >=0.115,<1
 - Uvicorn: >=0.30,<1
 - CrewAI: >=1.15,<2 (with tools)
+- firecrawl-py: >=4,<5 (the map tool uses the v2 `map()` call)
 - Docker: Compatible with Docker Engine 20.10+
